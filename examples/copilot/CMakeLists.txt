@@ -1,0 +1,7 @@
+set(TARGET llama-copilot)
+add_executable(${TARGET} copilot.cpp)
+target_sources(${TARGET} PRIVATE ${CMAKE_SOURCE_DIR}/vendor/cpp-httplib/httplib.cpp)
+install(TARGETS ${TARGET} RUNTIME)
+target_link_libraries(${TARGET} PRIVATE llama ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories(${TARGET} PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/vendor)
+target_compile_features(${TARGET} PRIVATE cxx_std_17)

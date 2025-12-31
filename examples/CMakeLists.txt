@@ -18,6 +18,7 @@ else()
     add_subdirectory(embedding)
     add_subdirectory(eval-callback)
 
+    add_subdirectory(copilot)
     add_subdirectory(gguf-hash)
     add_subdirectory(gguf)
     add_subdirectory(idle)
